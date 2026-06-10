@@ -1,3 +1,4 @@
+Annotation
 *тут нужно общее описание проекта
 
 Software section:
@@ -69,6 +70,9 @@ LXN - Layer X (eXtra) Notes - Слой металлизированных и н�
 
 
 
-*тут ссылки на фото
-1) 
-2) 
+Device assembly photo.
+*тут вставить фото по этим ссылкам
+Hardware/Photo/Photo_01.png
+Hardware/Photo/Photo_02.png
+Hardware/Photo/Photo_03.png
+Hardware/Photo/Photo_04.png
