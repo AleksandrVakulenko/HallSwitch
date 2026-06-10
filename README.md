@@ -9,38 +9,38 @@ A software/hardware package for controlling a 4×4 analog switch matrix designed
 ---
 ## Command Protocol / Протокол команд
 
-#### SCPI-like Commands / SCPI-подобные команды
+#### SCPI Commands / SCPI команды
 
 | Команда (Command) | Описание (Description) |
 |------------------|------------------------|
-| `*IDN?` | Прибор возвращает идентификационную информацию (производитель, модель, прошивка).<br/>The device returns identification information (manufacturer, model, firmware). |
-| `*RST`  | Программный сброс прибора в исходное состояние (все выходы отключены, `XXXX`).<br/>Software reset of the device to its initial state (all outputs disconnected, `XXXX`). |
+| `*IDN?` | Прибор возвращает идентификационную информацию (модель, прошивка).<br/>The device returns identification information (model, firmware). |
+| `*RST`  | Программный сброс прибора в исходное состояние (все входы отключены).<br/>Software reset of the device to its initial state (all inputs disconnected). |
 
 #### Switch Matrix Commands / Команды управления коммутатором
 
-Коммутатор соединяет четыре **буквенных входа** (A, B, C, D) с четырьмя **числовыми выходами** (1, 2, 3, 4). Команда представляет собой строку из 4 символов, определяющую, какой буквенный (или цифровой) контакт подключён к каждой позиции.
+Коммутатор соединяет четыре буквенных входа (A, B, C, D) с четырьмя числовыми входами (1, 2, 3, 4). Команда представляет собой строку из 4 символов, определяющую, какой буквенный (или цифровой) контакт подключён к каждой позиции.
 
-1. **Команда буквенного порядка** — порядок букв соответствует порядку номерных выходов (1-2-3-4).
+1. **Команда буквенного порядка** — порядок букв соответствует порядку номерных входов (1-2-3-4).
 2. **Команда цифрового порядка** — порядок цифр соответствует порядку буквенных входов (A-B-C-D).
 
-- Все символы должны быть **заглавными** буквами (A, B, C, D) **или** цифрами (1, 2, 3, 4). Смешивание букв и цифр в одной команде запрещено.
-- Один и тот же символ (кроме `X`) **не должен повторяться** в команде.
-- Чтобы оставить выход **неподключённым**, используйте символ `X`.
+- Все символы должны быть заглавными буквами (A, B, C, D) или цифрами (1, 2, 3, 4). Смешивание букв и цифр в одной команде запрещено.
+- Один и тот же символ (кроме `X`) не должен повторяться в команде.
+- Чтобы оставить вход неподключённым, используйте символ `X`.
 
 
-The switch matrix maps the four **lettered inputs** (A, B, C, D) to the four **numbered outputs** (1, 2, 3, 4). A command is a 4-character string that specifies which letter (or number) is connected to each position.  
+The switch matrix maps the four lettered inputs (A, B, C, D) to the four numbered inputs (1, 2, 3, 4). A command is a 4-character string that specifies which letter (or number) is connected to each position.  
 
-1. **Letter-order command** — the order of letters corresponds to the order of numbered outputs (1-2-3-4).  
+1. **Letter-order command** — the order of letters corresponds to the order of numbered inputs (1-2-3-4).  
 2. **Digit-order command** — the order of digits corresponds to the order of lettered inputs (A-B-C-D).  
 
-- All characters must be **uppercase** letters (A, B, C, D) **or** digits (1, 2, 3, 4). Mixing letters and digits in one command is forbidden.  
-- A symbol (except `X`) **must not appear more than once** in the command.  
-- To leave an output **disconnected**, use the character `X`.  
+- All characters must be uppercase letters (A, B, C, D) or digits (1, 2, 3, 4). Mixing letters and digits in one command is forbidden.  
+- A symbol (except `X`) must not appear more than once in the command.  
+- To leave an input disconnected, use the character `X`.  
 
 
 **Example 1 / Пример 1**
 Требуемое подключение коммутатора / Desired switch connection:
-| Букв. вход (Letter) | Числ. выход (Number) |
+| Букв. вход (Letter) | Числ. вход (Number) |
 |---------------------|----------------------|
 | A                   | 3                    |
 | B                   | 4                    |
@@ -52,7 +52,7 @@ The switch matrix maps the four **lettered inputs** (A, B, C, D) to the four **n
 
 **Example 2 / Пример 2**
 Требуемое подключение коммутатора / Desired switch connection:
-| Букв. вход (Letter) | Числ. выход (Number)        |
+| Букв. вход (Letter) | Числ. вход (Number)        |
 |---------------------|-----------------------------|
 | A                   | X (отключён / disconnected) |
 | B                   | 1                           |
