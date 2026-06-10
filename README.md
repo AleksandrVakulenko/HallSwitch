@@ -39,6 +39,7 @@ The switch matrix maps the four lettered inputs (A, B, C, D) to the four numbere
 
 
 **Example 1 / Пример 1**
+
 Требуемое подключение коммутатора / Desired switch connection:
 | Букв. вход (Letter) | Числ. вход (Number) |
 |---------------------|----------------------|
@@ -51,6 +52,7 @@ The switch matrix maps the four lettered inputs (A, B, C, D) to the four numbere
 Команда цифрового порядка (Digit-order command): `3421`
 
 **Example 2 / Пример 2**
+
 Требуемое подключение коммутатора / Desired switch connection:
 | Букв. вход (Letter) | Числ. вход (Number)        |
 |---------------------|-----------------------------|
