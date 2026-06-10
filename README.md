@@ -31,8 +31,6 @@ A software/hardware package for controlling a 4×4 analog switch matrix designed
 - Чтобы оставить выход **неподключённым**, используйте символ `X`.
 
 
-
-
 The switch matrix maps the four **lettered inputs** (A, B, C, D) to the four **numbered outputs** (1, 2, 3, 4). A command is a 4-character string that specifies which letter (or number) is connected to each position.  
 
 1. **Letter-order command** — the order of letters corresponds to the order of numbered outputs (1-2-3-4).  
@@ -42,19 +40,9 @@ The switch matrix maps the four **lettered inputs** (A, B, C, D) to the four **n
 - A symbol (except `X`) **must not appear more than once** in the command.  
 - To leave an output **disconnected**, use the character `X`.  
 
-**Two interpretations**
-
-
-
-
-
-
-
-
 
 **Example 1 / Пример 1**
-|Соединение / Connect                        |
-|--------------------------------------------|
+Требуемое подключение коммутатора / Desired switch connection:
 | Букв. вход (Letter) | Числ. выход (Number) |
 |---------------------|----------------------|
 | A                   | 3                    |
@@ -66,8 +54,7 @@ The switch matrix maps the four **lettered inputs** (A, B, C, D) to the four **n
 Команда цифрового порядка (Digit-order command): `3421`
 
 **Example 2 / Пример 2**
-|Соединение / Connect                               |
-|---------------------------------------------------|
+Требуемое подключение коммутатора / Desired switch connection:
 | Букв. вход (Letter) | Числ. выход (Number)        |
 |---------------------|-----------------------------|
 | A                   | X (отключён / disconnected) |
