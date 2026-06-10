@@ -21,26 +21,39 @@ A software/hardware package for controlling a 4×4 analog switch matrix designed
 
 #### Switch Matrix Commands / Команды управления коммутатором
 
-The switch matrix maps the four **lettered inputs** (A, B, C, D) to the four **numbered outputs** (1, 2, 3, 4). A command is a 4-character string that specifies which letter (or number) is connected to each position.  
 Коммутатор соединяет четыре **буквенных входа** (A, B, C, D) с четырьмя **числовыми выходами** (1, 2, 3, 4). Команда представляет собой строку из 4 символов, определяющую, какой буквенный (или цифровой) контакт подключён к каждой позиции.
 
-**Rules / Правила:**
+**Правила:**
+
+- Все символы должны быть **заглавными** буквами (A, B, C, D) **или** цифрами (1, 2, 3, 4). Смешивание букв и цифр в одной команде запрещено.
+- Один и тот же символ (кроме `X`) **не должен повторяться** в команде.
+- Чтобы оставить выход **неподключённым**, используйте символ `X`.
+
+**Две интерпретации:**
+
+1. **Команда буквенного порядка** — порядок букв соответствует порядку номерных выходов (1-2-3-4).
+2. **Команда цифрового порядка** — порядок цифр соответствует порядку буквенных входов (A-B-C-D).
+
+
+
+The switch matrix maps the four **lettered inputs** (A, B, C, D) to the four **numbered outputs** (1, 2, 3, 4). A command is a 4-character string that specifies which letter (or number) is connected to each position.  
+
+**Rules**
 
 - All characters must be **uppercase** letters (A, B, C, D) **or** digits (1, 2, 3, 4). Mixing letters and digits in one command is forbidden.  
-  Все символы должны быть **заглавными** буквами (A, B, C, D) **или** цифрами (1, 2, 3, 4). Смешивание букв и цифр в одной команде запрещено.
 - A symbol (except `X`) **must not appear more than once** in the command.  
-  Один и тот же символ (кроме `X`) **не должен повторяться** в команде.
 - To leave an output **disconnected**, use the character `X`.  
-  Чтобы оставить выход **неподключённым**, используйте символ `X`.
 
-**Two interpretations / Две интерпретации:**
+**Two interpretations**
 
 1. **Letter-order command** — the order of letters corresponds to the order of numbered outputs (1-2-3-4).  
-   **Команда буквенного порядка** — порядок букв соответствует порядку номерных выходов (1-2-3-4).
 2. **Digit-order command** — the order of digits corresponds to the order of lettered inputs (A-B-C-D).  
-   **Команда цифрового порядка** — порядок цифр соответствует порядку буквенных входов (A-B-C-D).
 
-**Examples / Примеры:**
+
+
+
+
+
 
 **Example 1 / Пример 1**
 
