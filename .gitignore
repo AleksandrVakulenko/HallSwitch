@@ -1,8 +1,9 @@
 *.zip
 *.rar
+*.docx
 
-*.dch
-*.dip
+*.dch*
+*.dip*
 
 __pycache__/
 *.pyc
