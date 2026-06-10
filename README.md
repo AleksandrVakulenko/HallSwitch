@@ -16,7 +16,8 @@ A software/hardware package for controlling a 4×4 analog switch matrix designed
 | `*IDN?` | Прибор возвращает идентификационную информацию (модель, прошивка).<br/>The device returns identification information (model, firmware). |
 | `*RST`  | Программный сброс прибора в исходное состояние (все входы отключены).<br/>Software reset of the device to its initial state (all inputs disconnected). |
 
-#### Switch Matrix Commands / Команды управления коммутатором
+
+#### Команды управления коммутатором
 
 Коммутатор соединяет четыре буквенных входа (A, B, C, D) с четырьмя числовыми входами (1, 2, 3, 4). Команда представляет собой строку из 4 символов, определяющую, какой буквенный (или цифровой) контакт подключён к каждой позиции.
 
@@ -27,6 +28,8 @@ A software/hardware package for controlling a 4×4 analog switch matrix designed
 - Один и тот же символ (кроме `X`) не должен повторяться в команде.
 - Чтобы оставить вход неподключённым, используйте символ `X`.
 
+
+#### Switch Matrix Commands
 
 The switch matrix maps the four lettered inputs (A, B, C, D) to the four numbered inputs (1, 2, 3, 4). A command is a 4-character string that specifies which letter (or number) is connected to each position.  
 
