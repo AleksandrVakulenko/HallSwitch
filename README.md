@@ -7,10 +7,7 @@
 A software/hardware package for controlling a 4×4 analog switch matrix designed to automate Hall‑effect measurements (Van der Pauw method). Includes MATLAB, Python and LabVIEW drivers, plus the PCB design of the relay matrix.
 
 ---
-
-## Software
-
-### Command Protocol / Протокол команд
+## Command Protocol / Протокол команд
 
 #### SCPI-like Commands / SCPI-подобные команды
 
@@ -65,6 +62,8 @@ The switch matrix maps the four **lettered inputs** (A, B, C, D) to the four **n
 Команда буквенного порядка (Letter-order command): `BXDX`  
 Команда цифрового порядка (Digit-order command): `X1X3`
 
+---
+## Software
 
 ### MATLAB R2021b
 
