@@ -1,10 +1,10 @@
 # Hall_box
 
 **Русский:**  
-Программно-аппаратный комплекс для управления аналоговым коммутатором 4×4, предназначенным для автоматизации измерений эффекта Холла по методу Ван-дер-Пау. Состоит из драйверов для MATLAB, Python и LabVIEW, а также конструкции печатной платы (релейная матрица на 8 контактов).
+Программно-аппаратный комплекс для управления аналоговым коммутатором 4×4, предназначенным для автоматизации измерений эффекта Холла по методу Ван-дер-Пау. Состоит из драйверов для MATLAB, Python и LabVIEW, а также конструкции печатной платы.
 
 **English:**  
-A software/hardware package for controlling a 4×4 analog switch matrix designed to automate Hall‑effect measurements (Van der Pauw method). Includes MATLAB, Python and LabVIEW drivers, plus the PCB design of the relay matrix (8 contacts).
+A software/hardware package for controlling a 4×4 analog switch matrix designed to automate Hall‑effect measurements (Van der Pauw method). Includes MATLAB, Python and LabVIEW drivers, plus the PCB design of the relay matrix.
 
 ---
 
@@ -19,7 +19,7 @@ A software/hardware package for controlling a 4×4 analog switch matrix designed
   2. Каждый раз после запуска MATLAB выполните `Fern.load('aDevice')`.  
   3. Создайте объект устройства: `Box = Hall_box(COM_port);`  
   4. Отправляйте команды, например: `Box.set_relay('ABCD');`  
-- **Примеры:** `TEST/Test_01.m`, `TEST/Test_02.m`
+- **Примеры:** `Matlab/TEST/Test_01.m`, `Matlab/TEST/Test_02.m`
 
 **English:**  
 - **Dependencies:** `aDevice` class from the [Automation devices module](https://github.com/AleksandrVakulenko/Automation_device_class) of the [Fern](https://github.com/AleksandrVakulenko/Fern) package manager.  
@@ -28,7 +28,7 @@ A software/hardware package for controlling a 4×4 analog switch matrix designed
   2. Run `Fern.load('aDevice')` every time after starting MATLAB.  
   3. Create the device object: `Box = Hall_box(COM_port);`  
   4. Send commands, e.g.: `Box.set_relay('ABCD');`  
-- **Examples:** `TEST/Test_01.m`, `TEST/Test_02.m`
+- **Examples:** `Matlab/TEST/Test_01.m`, `Matlab/TEST/Test_02.m`
 
 ### Python
 
@@ -39,7 +39,7 @@ A software/hardware package for controlling a 4×4 analog switch matrix designed
   2. Импортируйте класс: `from Hall_box import HallBox`  
   3. Создайте объект: `box = HallBox(com_port)`  
   4. Выполняйте команды: `err_status, err_no, err_comment = box.set_relay('ABCD')`  
-- **Примеры:** `Test_02.py`
+- **Примеры:** `Python/Test_02.py`
 
 **English:**  
 - **Dependencies:** `pyserial`.  
@@ -48,7 +48,7 @@ A software/hardware package for controlling a 4×4 analog switch matrix designed
   2. Import the class: `from Hall_box import HallBox`  
   3. Create the device: `box = HallBox(com_port)`  
   4. Execute commands: `err_status, err_no, err_comment = box.set_relay('ABCD')`  
-- **Examples:** `Test_02.py`
+- **Examples:** `Python/Test_02.py`
 
 ### LabVIEW 17 (64‑bit)
 
@@ -93,14 +93,14 @@ Gerber file extensions included in the project and the corresponding PCB layers.
 
 ### Фотографии устройства / Device assembly photos
 
-Фотографии собранного устройства помогают понять, как оно выглядит и как собирается.  
-*The photos below show the assembled device to help understand its construction.*
+Фотографии собранного устройства.
+*The photos below show the assembled device*
 
 <p align="center">
-  <img src="Hardware/Photo/Photo_01.png" width="45%" alt="Общий вид / Overview" />
-  <img src="Hardware/Photo/Photo_02.png" width="45%" alt="Внутренняя компоновка / Inside view" />
+  <img src="Hardware/Photo/Photo_01.png" width="45%" alt="Общий вид спереди / Overview front" />
+  <img src="Hardware/Photo/Photo_02.png" width="45%" alt="Общий вид сзади / Overview back" />
 </p>
 <p align="center">
-  <img src="Hardware/Photo/Photo_03.png" width="45%" alt="Подключение образца / Sample connection" />
-  <img src="Hardware/Photo/Photo_04.png" width="45%" alt="Задняя панель / Rear panel" />
+  <img src="Hardware/Photo/Photo_03.png" width="45%" alt="Общий вид внутри / Overview inside" />
+  <img src="Hardware/Photo/Photo_04.jpg" width="45%" alt="Монтаж платы / PCB assembly" />
 </p>
