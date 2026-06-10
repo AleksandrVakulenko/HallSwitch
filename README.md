@@ -23,22 +23,20 @@ A software/hardware package for controlling a 4×4 analog switch matrix designed
 
 Коммутатор соединяет четыре **буквенных входа** (A, B, C, D) с четырьмя **числовыми выходами** (1, 2, 3, 4). Команда представляет собой строку из 4 символов, определяющую, какой буквенный (или цифровой) контакт подключён к каждой позиции.
 
-**Правила:**
+1. **Команда буквенного порядка** — порядок букв соответствует порядку номерных выходов (1-2-3-4).
+2. **Команда цифрового порядка** — порядок цифр соответствует порядку буквенных входов (A-B-C-D).
 
 - Все символы должны быть **заглавными** буквами (A, B, C, D) **или** цифрами (1, 2, 3, 4). Смешивание букв и цифр в одной команде запрещено.
 - Один и тот же символ (кроме `X`) **не должен повторяться** в команде.
 - Чтобы оставить выход **неподключённым**, используйте символ `X`.
 
-**Две интерпретации:**
-
-1. **Команда буквенного порядка** — порядок букв соответствует порядку номерных выходов (1-2-3-4).
-2. **Команда цифрового порядка** — порядок цифр соответствует порядку буквенных входов (A-B-C-D).
 
 
 
 The switch matrix maps the four **lettered inputs** (A, B, C, D) to the four **numbered outputs** (1, 2, 3, 4). A command is a 4-character string that specifies which letter (or number) is connected to each position.  
 
-**Rules**
+1. **Letter-order command** — the order of letters corresponds to the order of numbered outputs (1-2-3-4).  
+2. **Digit-order command** — the order of digits corresponds to the order of lettered inputs (A-B-C-D).  
 
 - All characters must be **uppercase** letters (A, B, C, D) **or** digits (1, 2, 3, 4). Mixing letters and digits in one command is forbidden.  
 - A symbol (except `X`) **must not appear more than once** in the command.  
@@ -46,8 +44,7 @@ The switch matrix maps the four **lettered inputs** (A, B, C, D) to the four **n
 
 **Two interpretations**
 
-1. **Letter-order command** — the order of letters corresponds to the order of numbered outputs (1-2-3-4).  
-2. **Digit-order command** — the order of digits corresponds to the order of lettered inputs (A-B-C-D).  
+
 
 
 
@@ -56,9 +53,8 @@ The switch matrix maps the four **lettered inputs** (A, B, C, D) to the four **n
 
 
 **Example 1 / Пример 1**
-
-Connect / Соединение:
-
+|Соединение / Connect                        |
+|--------------------------------------------|
 | Букв. вход (Letter) | Числ. выход (Number) |
 |---------------------|----------------------|
 | A                   | 3                    |
@@ -66,22 +62,22 @@ Connect / Соединение:
 | C                   | 2                    |
 | D                   | 1                    |
 
-Letter-order command / Команда буквенного порядка: `DCAB`  
-Digit-order command / Команда цифрового порядка: `3421`
+Команда буквенного порядка (Letter-order command): `DCAB`  
+Команда цифрового порядка (Digit-order command): `3421`
 
 **Example 2 / Пример 2**
-
-Connect / Соединение:
-
-| Букв. вход (Letter) | Числ. выход (Number)     |
-|---------------------|--------------------------|
+|Соединение / Connect                               |
+|---------------------------------------------------|
+| Букв. вход (Letter) | Числ. выход (Number)        |
+|---------------------|-----------------------------|
 | A                   | X (отключён / disconnected) |
-| B                   | 1                        |
+| B                   | 1                           |
 | C                   | X (отключён / disconnected) |
-| D                   | 3                        |
+| D                   | 3                           |
 
-Letter-order command / Команда буквенного порядка: `BXDX`  
-Digit-order command / Команда цифрового порядка: `X1X3`
+Команда буквенного порядка (Letter-order command): `BXDX`  
+Команда цифрового порядка (Digit-order command): `X1X3`
+
 
 ### MATLAB R2021b
 
