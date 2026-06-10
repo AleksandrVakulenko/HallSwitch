@@ -4,7 +4,7 @@
 Программно-аппаратный комплекс для управления аналоговым коммутатором 4×4, предназначенным для автоматизации измерений эффекта Холла по методу Ван-дер-Пау. Состоит из драйверов для MATLAB, Python и LabVIEW, а также конструкции печатной платы.
 
 **English:**  
-A software/hardware package for controlling a 4×4 analog switch matrix designed to automate Hall‑effect measurements (Van der Pauw method). Includes MATLAB, Python and LabVIEW drivers, plus the PCB design of the relay matrix.
+A software/hardware package for controlling a 4×4 analog switch matrix designed to automate Hall-effect measurements (Van der Pauw method). Includes MATLAB, Python and LabVIEW drivers, plus the PCB design of the relay matrix.
 
 ---
 ## Command Protocol / Протокол команд
@@ -95,10 +95,10 @@ The switch matrix maps the four lettered inputs (A, B, C, D) to the four numbere
 **Русский:**  
 - **Зависимости:** библиотека `pyserial`.  
 - **Использование:**  
-  1. Установите pyserial: `python3 -m pip install pyserial`  
-  2. Импортируйте класс: `from Hall_box import HallBox`  
-  3. Создайте объект: `box = HallBox(com_port)`  
-  4. Выполняйте команды: `err_status, err_no, err_comment = box.set_relay('ABCD')`  
+  1) Установите pyserial: `python3 -m pip install pyserial`  
+  2) Импортируйте класс: `from Hall_box import HallBox`  
+  3) Создайте объект: `box = HallBox(com_port)`  
+  4) Выполняйте команды: `err_status, err_no, err_comment = box.set_relay('ABCD')`  
 - **Примеры:** `Python/Test_02.py`
 
 **English:**  
@@ -110,7 +110,7 @@ The switch matrix maps the four lettered inputs (A, B, C, D) to the four numbere
   4. Execute commands: `err_status, err_no, err_comment = box.set_relay('ABCD')`  
 - **Examples:** `Python/Test_02.py`
 
-### LabVIEW 17 (64‑bit)
+### LabVIEW 17 (64-bit)
 
 **Русский:**  
 - **Использование:**  
@@ -130,15 +130,12 @@ The switch matrix maps the four lettered inputs (A, B, C, D) to the four numbere
 
 ---
 
-## Hardware
+## Hardware (version A1.3)
 
-### Gerber‑file notation
+### Gerber-file notation
 
-**Русский:**  
-Расширения Gerber‑файлов, входящих в проект, и соответствующие слои печатной платы.
-
-**English:**  
-Gerber file extensions included in the project and the corresponding PCB layers.
+Расширения Gerber-файлов, входящих в проект, и соответствующие слои печатной платы.
+<br> (*Gerber file extensions included in the project and the corresponding PCB layers.*)
 
 | Обозначение (Ext.) | Полное название (Full name) | Описание слоя (Layer description) |
 |-------------------|-----------------------------|-----------------------------------|
@@ -148,13 +145,12 @@ Gerber file extensions included in the project and the corresponding PCB layers.
 | **GBL** | Gerber Bottom Layer | Нижний слой меди (Bottom Copper) |
 | **GBS** | Gerber Bottom Solder mask | Нижняя паяльная маска (Bottom Solder Mask) |
 | **GBO** | Gerber Bottom Overlay | Нижняя шелкография (Bottom Silkscreen) |
-| **GKO** | Gerber Keep‑Out | Контур платы и запретные зоны (Board Outline / Keep‑Out) |
-| **LXN** | Layer X (eXtra) Notes | Слой металлизированных и неметаллизированных отверстий (Plated & non‑plated holes) |
+| **GKO** | Gerber Keep-Out | Контур платы и запретные зоны (Board Outline / Keep-Out) |
+| **LXN** | Layer X (eXtra) Notes | Слой металлизированных и неметаллизированных отверстий (Plated & non-plated holes) |
 
 ### Фотографии устройства / Device assembly photos
 
-Фотографии собранного устройства.
-*The photos below show the assembled device*
+Фотографии собранного устройства. / *The photos below show the assembled device.*
 
 <p align="center">
   <img src="Hardware/Photo/Photo_01.png" width="45%" alt="Общий вид спереди / Overview front" />
