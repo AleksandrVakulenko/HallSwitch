@@ -150,8 +150,6 @@ The switch matrix maps the four lettered inputs (A, B, C, D) to the four numbere
 
 ### Фотографии устройства / Device assembly photos
 
-Фотографии собранного устройства. / *The photos below show the assembled device.*
-
 <p align="center">
   <img src="Hardware/Photo/Photo_01.png" width="45%" alt="Общий вид спереди / Overview front" />
   <img src="Hardware/Photo/Photo_02.png" width="45%" alt="Общий вид сзади / Overview back" />
