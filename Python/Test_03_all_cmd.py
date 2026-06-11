@@ -10,9 +10,15 @@
 
 import warnings
 from Hall_box import HallBox      # класс из предыдущего ответа
+from serial.tools import list_ports
 
 def main():
-    com_port = 3
+
+    ports = [port.device for port in list_ports.comports()]
+    print(ports)
+    com_port = input("Enter COM port num: ");
+    com_port = int(com_port)
+    
     box = HallBox(com_port)
 
     # Таблица тестов: (команда, ожидаемый код ошибки или None, если ошибки не должно быть)

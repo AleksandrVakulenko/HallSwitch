@@ -10,9 +10,14 @@
 
 import warnings
 from Hall_box import HallBox      # Предполагается, что класс сохранён в файле hall_box.py
+from serial.tools import list_ports
 
 def main():
-    com_port = 3
+    ports = [port.device for port in list_ports.comports()]
+    print(ports)
+    com_port = input("Enter COM port num: ");
+    com_port = int(com_port)
+    
     box = HallBox(com_port)
     cmd = "ABCD"
 
